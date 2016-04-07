@@ -6,18 +6,18 @@ body {
   font-family: 'Raleway', sans-serif;
   background-color: #c1bba9;
   font: normal 100%/150%;
-  margin: 0em auto;
+  letter-spacing: .1em;
+  margin: 0 auto;
 }
 
 .bodyBackground {
   background-color: #6e3002;
   height: 5em;
-  position: relative;
 }
 
 .container {
   width: 70%;
-  margin: 0em auto;
+  margin: 0 auto;
   background-color: #968c6d;
   position: relative;
   top: -5em;
@@ -26,23 +26,42 @@ body {
 header {
   color: #e9e7e0; /* creamy white*/
   background-color: #bd5101;
-  padding: 1.5em;
   border-bottom: 3px solid #bd5101;
 }
 
-header span {
+header p {
+  margin: 0;
+  padding: 1em 2em;
   font-size: 1.5em;
 }
 
+.expand-letter-space {
+  letter-spacing: .4em;
+}
 /* nav links */
 
 nav {
-  background-color: green;
-  padding: 0;
+  padding: 0 2em 0 0;
+  background-color: #776e53;
 }
 
 nav ul {
   float: right;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  padding: 0 .8em;
+  text-decoration: none;
+  color: #e9e7e0; /* creamy white*/
+  font-weight: 400;
+}
+
+nav a:hover {
+  font-weight: 800;
 }
 
 nav:after {
@@ -51,24 +70,11 @@ nav:after {
   clear: both;
 }
 
-nav li {
-  display: inline;
-}
-
-nav a {
-  padding: 0 1em;
-  text-decoration: none;
-  color: #e9e7e0; /* creamy white*/
-}
-
-nav a:hover {
-  color: #orange; /* white */
-}
-
 /*creates rows for thumbnails*/
 .grid {
   background-color: #968c6d;
   padding: 1em;
+  position: relative;
 }
 
 .grid-pad {
@@ -98,8 +104,21 @@ img {
   height: auto;
 }
 
+img:hover {
+  opacity: 0.5;
+}
+
 /*attribute selector - using the star will select everything that has col- in it*/
 [class*="col-"] {
   float: left;
   padding: .5em 1em;
+}
+
+#pop {
+  width: 70%;
+  border: .5em solid #e9e7e0;
+  z-index: 100;
+  top: 50%;
+  right: 50%;
+  position: absolute;
 }
